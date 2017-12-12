@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Nature and stuff\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\PickupFruit.cs" />
      <Compile Include="Assets\Scripts\RespawnFruit.cs" />
      <Compile Include="Assets\Scripts\SpawnFruit.cs" />
      <Compile Include="Assets\Unity UI System\Scripts\ActiveStateToggler.cs" />
