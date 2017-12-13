@@ -45,9 +45,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-    }
+        if (Input.GetKeyDown(KeyCode.L))
 
+        {
+            Debug.Log("Async loading");
+            LevelLoader.LoadAsync(1);
+        }
+
+    }
   
 
 }
