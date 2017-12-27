@@ -12,6 +12,7 @@ public enum GamePlayState
 public class GameManager : MonoBehaviour
 {
     private static GameManager Instance;
+    public static GamePlayState gameState;
 
 
     public static GameManager Get()
@@ -34,6 +35,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Init()
+    {
+       // AudioManager.Init();
+       // GameData.Load();
+        SetGameState(GamePlayState.Gameplay);
+    }
+
+    public static void SetGameState(GamePlayState state)
+    {
+        gameState = state;
+        if (gameState == GamePlayState.GameMenu)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -49,7 +73,7 @@ public class GameManager : MonoBehaviour
 
         {
             Debug.Log("Async loading");
-            LevelLoader.LoadAsync(1);
+            LevelLoader.LoadAsync(2);
         }
 
     }
