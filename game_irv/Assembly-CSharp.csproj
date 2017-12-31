@@ -52,13 +52,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Nature and stuff\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\AudioResources.cs" />
+     <Compile Include="Assets\Scripts\FruitInfo.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameMenu.cs" />
      <Compile Include="Assets\Scripts\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\PickupFruit.cs" />
-     <Compile Include="Assets\Scripts\RespawnFruit.cs" />
+     <Compile Include="Assets\Scripts\PickUpFruit.cs" />
      <Compile Include="Assets\Scripts\SpawnFruit.cs" />
+     <Compile Include="Assets\Scripts\UserResources.cs" />
      <Compile Include="Assets\Unity UI System\Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Unity UI System\Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Unity UI System\Scripts\ChangeColor.cs" />

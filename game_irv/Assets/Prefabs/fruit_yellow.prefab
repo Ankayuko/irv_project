@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 135484463867560320}
   - component: {fileID: 23100121979974376}
   - component: {fileID: 114645295928785366}
+  - component: {fileID: 114453393450735368}
   m_Layer: 0
   m_Name: fruit_yellow
   m_TagString: yellow_fruit_tag
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445149924515064}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114453393450735368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445149924515064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a56a1c332b49b24493cb5580b94c726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collect_fruit: {fileID: 8300000, guid: e3b9486b5ebb59e49bd77ac12e551459, type: 3}
 --- !u!114 &114645295928785366
 MonoBehaviour:
   m_ObjectHideFlags: 1

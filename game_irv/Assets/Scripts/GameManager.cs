@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
-     
+            Init();
         }
         else
         {
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     private void Init()
     {
-       // AudioManager.Init();
+       
        // GameData.Load();
         SetGameState(GamePlayState.Gameplay);
     }
@@ -75,6 +75,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("Async loading");
             LevelLoader.LoadAsync(2);
         }
+
+      
 
     }
   

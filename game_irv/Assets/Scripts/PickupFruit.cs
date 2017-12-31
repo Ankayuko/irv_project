@@ -1,29 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PickupFruit : MonoBehaviour
-{
+public class PickUpFruit : MonoBehaviour {
 
-    public GameObject inventoryPanel;
+    public AudioClip collect_fruit;
 
-
-
-    void OnTriggerEnter(Collider collision)
+    void OnTriggerEnter()
     {
 
-        foreach (Transform child in inventoryPanel.transform)
-        {
-            if (child.gameObject.tag == collision.gameObject.tag)
-            {
-                string c = child.Find("Text").GetComponent<Text>().text;
-                int count = System.Int32.Parse(c) + 1;
-                child.Find("Text").GetComponent<Text>().text = "" + count;
-
-            }
-
-        }
+        AudioManager.instance.PlaySfx(collect_fruit, transform.position);
+        this.GetComponent<SphereCollider>().enabled = false;
+        this.GetComponent<MeshRenderer>().enabled = false;
+        //AudioManager.PlaySfx(AudioResources.Instance.collect_fruit);
+        Debug.Log("here");
+        //Invoke("respawn", 10);
     }
-}
+    //void respawn()
+    //{
+    //    this.GetComponent<SphereCollider>().enabled = true;
+    //    this.GetComponent<MeshRenderer>().enabled = true;
+    //}
+	// Use this for initialization
+	void Start () {
+
+      
+	}
 	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}

@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - red_fruit_tag
   - blue_fruit_tag
   - purple_fruit_tag
   - yellow_fruit_tag
   - green_fruit_tag
+  - red_fruit_tag
   layers:
   - Default
   - TransparentFX

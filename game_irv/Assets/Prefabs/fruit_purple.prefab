@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 135612922791004536}
   - component: {fileID: 23849393637204868}
   - component: {fileID: 114356385246444478}
+  - component: {fileID: 114300666165801528}
   m_Layer: 0
   m_Name: fruit_purple
   m_TagString: purple_fruit_tag
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1186073186348672}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114300666165801528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186073186348672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a56a1c332b49b24493cb5580b94c726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collect_fruit: {fileID: 8300000, guid: e3b9486b5ebb59e49bd77ac12e551459, type: 3}
 --- !u!114 &114356385246444478
 MonoBehaviour:
   m_ObjectHideFlags: 1
