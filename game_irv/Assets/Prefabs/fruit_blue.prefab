@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a56a1c332b49b24493cb5580b94c726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collect_fruit: {fileID: 8300000, guid: e3b9486b5ebb59e49bd77ac12e551459, type: 3}
+  particles: {fileID: 19800004, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
 --- !u!114 &114868955271331646
 MonoBehaviour:
   m_ObjectHideFlags: 1

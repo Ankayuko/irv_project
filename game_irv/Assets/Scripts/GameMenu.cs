@@ -13,7 +13,7 @@ public class GameMenu : MonoBehaviour {
 	
 
     void Start()
-    {
+    { 
         volumeSliders[0].value = AudioManager.instance.volBackground;
         volumeSliders[1].value = AudioManager.instance.volAmbient;
         volumeSliders[2].value = AudioManager.instance.volSfx;
@@ -23,7 +23,7 @@ public class GameMenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape) && AudioMenuUI.active==false)
+        if (Input.GetKeyDown(KeyCode.Escape) && AudioMenuUI.activeSelf==false)
         {
             if (GameIsPaused)
             {

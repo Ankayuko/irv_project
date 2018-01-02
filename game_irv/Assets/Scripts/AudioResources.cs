@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class AudioResources : MonoBehaviour
 {
-
+    
     public AudioClip BackgroundMusic;
     public AudioClip AmbientMusic;
-    
+    public  AudioClip sfxMusic;
+    public static AudioResources instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {   

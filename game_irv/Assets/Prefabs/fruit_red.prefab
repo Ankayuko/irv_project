@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 135648529718059750}
   - component: {fileID: 23179045108050582}
   - component: {fileID: 114516312524778628}
-  - component: {fileID: 114525625675647202}
+  - component: {fileID: 114362678286139236}
   m_Layer: 0
   m_Name: fruit_red
   m_TagString: red_fruit_tag
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1957328832901126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 487.37, y: 3.04, z: 242.59}
+  m_LocalPosition: {x: 487.37, y: 1.78, z: 250.79}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1957328832901126}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114362678286139236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957328832901126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a56a1c332b49b24493cb5580b94c726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 19800004, guid: 0438351a6e6422d43a09930e9be00ee9, type: 2}
 --- !u!114 &114516312524778628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,18 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b057e9c9da502da4cac807aecad379eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114525625675647202
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1957328832901126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a56a1c332b49b24493cb5580b94c726, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collect_fruit: {fileID: 8300000, guid: e3b9486b5ebb59e49bd77ac12e551459, type: 3}
 --- !u!135 &135648529718059750
 SphereCollider:
   m_ObjectHideFlags: 1

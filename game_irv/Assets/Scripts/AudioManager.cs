@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
 
       AudioSource backgroundMusic;
       AudioSource ambientMusic;
+    AudioSource sfxMusic;
+    
 
     public static AudioManager instance;
 
@@ -34,15 +36,20 @@ public class AudioManager : MonoBehaviour
 
             backgroundMusic = new AudioSource();
             ambientMusic = new AudioSource();
+            sfxMusic = new AudioSource();
 
             GameObject newBackgroundMusic = new GameObject("Background Music");
             GameObject newAmbientMusic = new GameObject("Ambient Music");
+            GameObject newSfxMusic = new GameObject("Sfx Music");
 
             backgroundMusic = newBackgroundMusic.AddComponent<AudioSource>();
             ambientMusic = newAmbientMusic.AddComponent<AudioSource>();
+            sfxMusic= newSfxMusic.AddComponent<AudioSource>();
 
             newBackgroundMusic.transform.parent = transform;
             newAmbientMusic.transform.parent = transform;
+            newSfxMusic.transform.parent = transform;
+            
 
             volBackground = PlayerPrefs.GetFloat("volBackground", 1);
             volAmbient = PlayerPrefs.GetFloat("volAmbient", 1);
@@ -72,6 +79,8 @@ public class AudioManager : MonoBehaviour
         }
         backgroundMusic.volume = volBackground;
         ambientMusic.volume = volAmbient;
+        sfxMusic.volume = volSfx;
+        
         
         
 
@@ -86,26 +95,24 @@ public class AudioManager : MonoBehaviour
     public void PlayBackgroundMusic(AudioClip clip)
     {   
         backgroundMusic.clip = clip;
-      //  backgroundMusic.loop = backgroundMusic.loop;
         backgroundMusic.Play();
         
     }
 
 
 
-    public  void PlaySfx(AudioClip clip, Vector3 pos)
+    public void PlaySfx(AudioClip clip)
     {
-        
-        if (clip != null) 
-        AudioSource.PlayClipAtPoint(clip, pos);
+        sfxMusic.clip = clip;
+        sfxMusic.Play();
     }
+    
 
 
 
     public  void PlayAmbient(AudioClip clip)
     {
         ambientMusic.clip = clip;
-        //ambientMusic.loop = ambientMusic.loop;
         ambientMusic.Play();
 
         // If source was not added, add it

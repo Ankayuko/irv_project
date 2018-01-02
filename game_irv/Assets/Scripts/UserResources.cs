@@ -18,17 +18,20 @@ public class UserResources : MonoBehaviour
     public UserResources()
     { }
 
-    public static void CollectFruit()
-    {   //if(tag=="red_fruit_tag")
+    public static void CollectFruit(string tag)
+    {   if (tag=="red_fruit_tag")
             red_fruit++;
-        //else if (tag == "blue_fruit_tag")
+        else if (tag == "blue_fruit_tag")
             blue_fruit++;
-       // else if (tag == "purple_fruit_tag")
+        else if (tag == "purple_fruit_tag")
             purple_fruit++;
-       // else if (tag == "yellow_fruit_tag")
+        else if (tag == "yellow_fruit_tag")
             yellow_fruit++;
-       // else if (tag == "green_fruit_tag")
+        else if (tag == "green_fruit_tag")
             green_fruit++;
+
+       // Debug.Log(tag);
+        Debug.Log(red_fruit);
         if (OnChange != null)
         {
             OnChange();
