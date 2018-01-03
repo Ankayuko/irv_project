@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackgroundMusic: {fileID: 8300000, guid: d33c809d6aa7a424985302e442064ed0, type: 3}
   AmbientMusic: {fileID: 8300000, guid: f944942a30f6fa942b04c3e6fd9ed4b3, type: 3}
-  loop: 1
+  sfxMusic: {fileID: 8300000, guid: e3b9486b5ebb59e49bd77ac12e551459, type: 3}
 --- !u!114 &114791676275124906
 MonoBehaviour:
   m_ObjectHideFlags: 1

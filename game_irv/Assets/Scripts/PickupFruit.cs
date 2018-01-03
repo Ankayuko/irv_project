@@ -22,7 +22,7 @@ public class PickUpFruit : MonoBehaviour {
         particles.transform.SetParent(transform.parent);
 
         // Starts a couroutine using the GameManager MonoBehaviour
-        //Coroutine coroutine = GameManager.Get().StartCoroutine(DestroyParticle(2));
+        Coroutine coroutine = GameManager.Get().StartCoroutine(DestroyParticle(1));
 
         // Destroy the pickup object
          Destroy(gameObject);

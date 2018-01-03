@@ -8,6 +8,7 @@ public class DontDestroyThis : MonoBehaviour {
     public static DontDestroyThis instance;
 
     void Awake() {
+
         if (instance == null)
             instance = this;
         else

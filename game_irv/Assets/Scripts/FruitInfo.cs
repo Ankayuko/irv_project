@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class FruitInfo : MonoBehaviour {
 
-
-
     public Text red_text;
     public Text blue_text;
     public Text purple_text;
@@ -14,7 +12,6 @@ public class FruitInfo : MonoBehaviour {
     public Text green_text;
    
 
-    // Use this for initialization
     void Start()
     {
         UpdateInfo();

@@ -19,9 +19,6 @@ public class GameMenu : MonoBehaviour {
         volumeSliders[2].value = AudioManager.instance.volSfx;
     }
 
-
-
-	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape) && AudioMenuUI.activeSelf==false)
         {
@@ -46,7 +43,6 @@ public class GameMenu : MonoBehaviour {
 
     void Pause()
     {
-        
         GameMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

@@ -11,15 +11,11 @@ public class AudioManager : MonoBehaviour
     public float volAmbient { get; private set; }
     public float volSfx { get; private set; }
 
-      AudioSource backgroundMusic;
-      AudioSource ambientMusic;
+    AudioSource backgroundMusic;
+    AudioSource ambientMusic;
     AudioSource sfxMusic;
     
-
     public static AudioManager instance;
-
-
-    
 
 
      void Awake()
@@ -81,9 +77,7 @@ public class AudioManager : MonoBehaviour
         ambientMusic.volume = volAmbient;
         sfxMusic.volume = volSfx;
         
-        
-        
-
+               
         PlayerPrefs.SetFloat("volBackground", volBackground);
         PlayerPrefs.SetFloat("volAmbient", volAmbient);
         PlayerPrefs.SetFloat("volSFX", volSfx);
@@ -96,9 +90,9 @@ public class AudioManager : MonoBehaviour
     {   
         backgroundMusic.clip = clip;
         backgroundMusic.Play();
+        backgroundMusic.loop = true;
         
     }
-
 
 
     public void PlaySfx(AudioClip clip)
@@ -108,62 +102,13 @@ public class AudioManager : MonoBehaviour
     }
     
 
-
-
     public  void PlayAmbient(AudioClip clip)
     {
         ambientMusic.clip = clip;
         ambientMusic.Play();
-
-        // If source was not added, add it
-
+        ambientMusic.loop = true;
     }
-
-
-
-    //public static void Init()
-    //{
-    //    init = true;
-    //    volBackground = PlayerPrefs.GetFloat("volBackground", 1);
-    //    volVoice = PlayerPrefs.GetFloat("volVoice", 1);
-    //    volSfx = PlayerPrefs.GetFloat("volSfx", 1);
-
-    //}
-
-    //public static float GetVolume(AudioChannel channel)
-    //{
-    //    if (!init)
-    //        Init();
-
-    //    switch (channel)
-    //    {
-    //        case AudioChannel.voice:
-    //            return volVoice;
-
-    //        case AudioChannel.background:
-    //            return volBackground;
-
-    //        case AudioChannel.sfx:
-    //            return volSfx;
-    //    }
-
-    //    return 0;
-    //}
-
-
-
-
-    //public static void SaveSettings()
-    //{
-    //    PlayerPrefs.SetFloat("volBackground", volBackground);
-    //    PlayerPrefs.SetFloat("volSfx", volSfx);
-    //    PlayerPrefs.SetFloat("volVoice", volVoice);
-    //}
-
-
-   
-
-   
+  
 }
 
 

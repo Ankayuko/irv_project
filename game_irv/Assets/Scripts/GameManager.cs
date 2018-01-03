@@ -37,10 +37,11 @@ public class GameManager : MonoBehaviour
 
     private void Init()
     {
-       
+     
        // GameData.Load();
         SetGameState(GamePlayState.Gameplay);
     }
+
 
     public static void SetGameState(GamePlayState state)
     {
@@ -58,26 +59,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Use this for initialization
-    void Start()
-    {
 
-    }
-
-
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) && SceneManager.GetActiveScene().buildIndex !=0 && SceneManager.GetActiveScene().buildIndex!=2)
 
         {
             Debug.Log("Async loading");
             LevelLoader.LoadAsync(2);
         }
-
-      
-
     }
   
 
