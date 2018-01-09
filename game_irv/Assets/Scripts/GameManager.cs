@@ -62,7 +62,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && SceneManager.GetActiveScene().buildIndex !=0 && SceneManager.GetActiveScene().buildIndex!=2)
+        if (Input.GetKeyDown(KeyCode.L) && SceneManager.GetActiveScene().buildIndex !=0 && SceneManager.GetActiveScene().buildIndex!=2
+            &&UserResources.red_fruit>= 20 && UserResources.blue_fruit >= 20 && UserResources.yellow_fruit >= 20 && UserResources.purple_fruit >= 20
+            && UserResources.green_fruit >= 20)
 
         {
             Debug.Log("Async loading");

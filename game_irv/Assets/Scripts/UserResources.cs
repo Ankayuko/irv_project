@@ -30,8 +30,7 @@ public class UserResources : MonoBehaviour
         else if (tag == "green_fruit_tag")
             green_fruit++;
 
-       // Debug.Log(tag);
-        Debug.Log(red_fruit);
+      
         if (OnChange != null)
         {
             OnChange();

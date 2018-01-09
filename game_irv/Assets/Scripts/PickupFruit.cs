@@ -11,7 +11,7 @@ public class PickUpFruit : MonoBehaviour {
     void OnTriggerEnter()
     {
 
-        Debug.Log(gameObject.tag);
+       // Debug.Log(gameObject.tag);
         UserResources.CollectFruit(gameObject.tag);
         AudioManager.instance.PlaySfx(AudioResources.instance.sfxMusic);
         this.GetComponent<SphereCollider>().enabled = false;
@@ -22,7 +22,7 @@ public class PickUpFruit : MonoBehaviour {
         particles.transform.SetParent(transform.parent);
 
         // Starts a couroutine using the GameManager MonoBehaviour
-        Coroutine coroutine = GameManager.Get().StartCoroutine(DestroyParticle(1));
+        Coroutine coroutine = GameManager.Get().StartCoroutine(DestroyParticle(5));
 
         // Destroy the pickup object
          Destroy(gameObject);
@@ -33,7 +33,7 @@ public class PickUpFruit : MonoBehaviour {
     private IEnumerator DestroyParticle(float delay)
     {
         yield return new WaitForSeconds(delay);
-        //Debug.Log("Destroy particle");
+        Debug.Log("Destroy particle");
         Destroy(particles.gameObject);
     }
 
