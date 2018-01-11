@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GameMenu : MonoBehaviour {
 
     public static bool GameIsPaused = false;
     public GameObject GameMenuUI;
     public GameObject AudioMenuUI;
     public Slider[] volumeSliders;
+    public Text ambientText;
+    public Text backgroundText;
+    public Text sfxText;
 	
 
     void Start()
@@ -77,15 +81,18 @@ public class GameMenu : MonoBehaviour {
     public void SetVolumeMusic(float value)
     {
         AudioManager.instance.SetVolume(AudioManager.AudioChannel.background, value);
+        backgroundText.text = (value * 100).ToString("0");
     }
 
     public void SetVolumeSFX(float value)
     {
         AudioManager.instance.SetVolume(AudioManager.AudioChannel.sfx, value);
+        sfxText.text = (value * 100).ToString("0");
     }
 
     public void SetVolumeAmbient(float value)
     {
         AudioManager.instance.SetVolume(AudioManager.AudioChannel.ambient, value);
+        ambientText.text = (value * 100).ToString("0");
     }
 }

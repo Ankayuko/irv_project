@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23811900060125950}
   - component: {fileID: 64524416031495938}
   - component: {fileID: 114862700236317450}
+  - component: {fileID: 114229632696601934}
   m_Layer: 0
   m_Name: Bush 01 prefab
   m_TagString: Untagged
@@ -93,11 +94,23 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: 1db83b9c9327c3745af4d7411a7fd41b, type: 3}
+--- !u!114 &114229632696601934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1879002656830862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17cc40c3f566975408b81231889ff8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup: {fileID: 0}
 --- !u!114 &114862700236317450
 MonoBehaviour:
   m_ObjectHideFlags: 1
