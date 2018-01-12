@@ -10,12 +10,14 @@ public class FruitInfo : MonoBehaviour {
     public Text purple_text;
     public Text yellow_text;
     public Text green_text;
+    public Text pick_fruit;
    
 
     void Start()
     {
         UpdateInfo();
         UserResources.OnChange += UpdateInfo;
+        pick_fruit.gameObject.SetActive(false);
     }
 
     public void UpdateInfo()
@@ -26,7 +28,16 @@ public class FruitInfo : MonoBehaviour {
         purple_text.text = UserResources.purple_fruit.ToString();
         yellow_text.text = UserResources.yellow_fruit.ToString();
         green_text.text = UserResources.green_fruit.ToString();
+
+        pick_fruit.gameObject.SetActive(true);
+        Coroutine coroutine = GameManager.Get().StartCoroutine(DestroyText(0.3f));
     }
 
+    private IEnumerator DestroyText(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Debug.Log("Destroy particle");
+        pick_fruit.gameObject.SetActive(false);
+    }
 
 }

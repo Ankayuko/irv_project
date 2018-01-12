@@ -18,8 +18,6 @@ public class PickUpFruit : MonoBehaviour {
         this.GetComponent<SphereCollider>().enabled = false;
         this.GetComponent<MeshRenderer>().enabled = false;
 
-     
-      
         // Destroy the pickup object
         Destroy(gameObject);
 
