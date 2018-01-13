@@ -7,7 +7,14 @@ public class MainMenu : MonoBehaviour {
 
 public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        GameData.NewGame();
+        SceneManager.LoadSceneAsync(1);
+    }
+
+ public void LoadFromSaved()
+    {
+        GameData.Load();
+        SceneManager.LoadSceneAsync(GameData.Instance.sceneIndex);
     }
 
 public void QuitGame()

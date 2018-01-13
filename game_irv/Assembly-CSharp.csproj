@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\DontDestroyThis.cs" />
      <Compile Include="Assets\Scripts\DoorAnimation.cs" />
      <Compile Include="Assets\Scripts\FruitInfo.cs" />
+     <Compile Include="Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameMenu.cs" />
      <Compile Include="Assets\Scripts\LevelLoader.cs" />

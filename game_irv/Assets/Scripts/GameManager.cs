@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+   
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.L) && SceneManager.GetActiveScene().buildIndex !=0 && SceneManager.GetActiveScene().buildIndex!=2
@@ -70,7 +70,21 @@ public class GameManager : MonoBehaviour
             Debug.Log("Async loading");
             LevelLoader.LoadAsync(2);
         }
+
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+          
+           GameData.Save();
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+          
+            GameData.Load();
+        }
+
     }
-  
+ 
 
 }

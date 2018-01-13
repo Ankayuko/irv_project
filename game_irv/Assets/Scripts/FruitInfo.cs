@@ -11,7 +11,7 @@ public class FruitInfo : MonoBehaviour {
     public Text yellow_text;
     public Text green_text;
     public Text pick_fruit;
-   
+    public static FruitInfo instance;
 
     void Start()
     {

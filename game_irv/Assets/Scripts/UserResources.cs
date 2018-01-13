@@ -19,7 +19,7 @@ public class UserResources : MonoBehaviour
     { }
 
     public static void CollectFruit(string tag)
-    {   if (tag=="red_fruit_tag")
+    { if (tag == "red_fruit_tag")
             red_fruit++;
         else if (tag == "blue_fruit_tag")
             blue_fruit++;
@@ -29,14 +29,27 @@ public class UserResources : MonoBehaviour
             yellow_fruit++;
         else if (tag == "green_fruit_tag")
             green_fruit++;
+        
 
-      
         if (OnChange != null)
         {
             OnChange();
         }
     }
 
+    public static void UpdateFruit(int red, int blue, int green, int yellow, int purple)
+    {
+        red_fruit = red;
+        blue_fruit = blue;
+        purple_fruit = purple;
+        yellow_fruit = yellow;
+        green_fruit = green;
+        if (OnChange != null)
+        {
+            OnChange();
+        }       
+    }
 
+ 
 }
-	
+

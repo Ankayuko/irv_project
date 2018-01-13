@@ -55,8 +55,8 @@ public class GameMenu : MonoBehaviour {
     public void LoadMenu()
     {
         
-        SceneManager.LoadScene(0);
-        Cursor.visible = true;
+        SceneManager.LoadSceneAsync(0);
+       
         
     }
 
@@ -65,9 +65,7 @@ public class GameMenu : MonoBehaviour {
         Pause();
         GameMenuUI.SetActive(false);
         AudioMenuUI.SetActive(true);
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.lockState = CursorLockMode.None;
+      
     }
 
 

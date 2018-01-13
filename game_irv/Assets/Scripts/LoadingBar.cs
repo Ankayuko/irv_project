@@ -7,6 +7,7 @@ public class LoadingBar : MonoBehaviour
 {
 
     public Slider loadingBar;
+    
   
 
 
@@ -17,7 +18,7 @@ public class LoadingBar : MonoBehaviour
 
 
         LevelLoader.OnLoadStart += () =>
-        {
+        {  
             gameObject.SetActive(true);
          
         };
@@ -30,6 +31,7 @@ public class LoadingBar : MonoBehaviour
                 gameObject.SetActive(false);
                
             }
+         
         });
     }
 }
