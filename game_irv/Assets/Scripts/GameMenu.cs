@@ -8,8 +8,10 @@ using UnityEngine.UI;
 public class GameMenu : MonoBehaviour {
 
     public static bool GameIsPaused = false;
+    public bool gameIsOver = false;
     public GameObject GameMenuUI;
     public GameObject AudioMenuUI;
+    public GameObject GameOverUI;
     public Slider[] volumeSliders;
     public Text ambientText;
     public Text backgroundText;
@@ -24,7 +26,7 @@ public class GameMenu : MonoBehaviour {
     }
 
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape) && AudioMenuUI.activeSelf==false)
+        if (Input.GetKeyDown(KeyCode.Escape) && AudioMenuUI.activeSelf==false && GameOverUI.activeSelf==false)
         {
             if (GameIsPaused)
             {
@@ -36,7 +38,25 @@ public class GameMenu : MonoBehaviour {
                 
             }
         }
-	}
+
+        if (SceneManager.GetActiveScene().buildIndex == 2 && UserResources.red_fruit >= 50 &&
+         UserResources.blue_fruit >= 50 && UserResources.yellow_fruit >= 50 && UserResources.purple_fruit >= 50
+         && UserResources.green_fruit >= 50)
+        {
+            Game_over();
+        }
+        
+
+    }
+
+
+    public void Game_over()
+    {
+        GameOverUI.SetActive(true);
+        Time.timeScale = 0f;
+       
+    }
+
 
     public void Resume()
     {
@@ -56,7 +76,6 @@ public class GameMenu : MonoBehaviour {
     {
         
         SceneManager.LoadSceneAsync(0);
-       
         
     }
 

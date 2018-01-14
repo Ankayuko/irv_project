@@ -129,7 +129,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ActiveStateToggler
 806bde7bf7b8cd94b3454407dc417485 Assembly-CSharp.dll:.SimpleTextureDrawing
 d0ee1e6819011e6810b3e81ffc447a6a Assembly-CSharp.dll:.SpawnFruit
-d8bfbafce001aae96852353fe2fdb6b6 Assembly-CSharp.dll:.GameMenu
+20a245bed766b0643c727e5e6ffa02b4 Assembly-CSharp.dll:.GameMenu
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 c1465577256149eb2fdaaf3754ab7da9 Assembly-CSharp.dll:.TiltWindow
