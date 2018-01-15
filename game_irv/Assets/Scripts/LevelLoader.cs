@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour {
 
+
     private static AsyncOperation operation;
 
     public delegate void LoadChange(float value);
@@ -18,8 +19,7 @@ public class LevelLoader : MonoBehaviour {
         
         while (!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-            Debug.Log(progress);
+           
             OnLoadChange(operation.progress);
             yield return new WaitForEndOfFrame();
         }

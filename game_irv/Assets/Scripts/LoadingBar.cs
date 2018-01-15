@@ -8,7 +8,6 @@ public class LoadingBar : MonoBehaviour
 
     public Slider loadingBar;
     
-  
 
 
     void Start()

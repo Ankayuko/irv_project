@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     private void Init()
     {
      
-       // GameData.Load();
+        GameData.NewGame();
         SetGameState(GamePlayState.Gameplay);
     }
 
